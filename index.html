@@ -183,7 +183,7 @@
 
 			<a
 				class="download-btn"
-				href="Minet-Pension-Conference-Program-2026.pdf"
+				href="2026.Minet.Zambia.Program.pdf"
 				download
 				aria-label="Download 3rd Annual Minet Pension Conference program PDF"
 			>
@@ -191,9 +191,23 @@
 			</a>
 
 			<p class="hint">
-				Place your PDF in this folder with the filename: Minet-Pension-Conference-Program-2026.pdf
+				Place your PDF in this folder with the filename: 2026.Minet.Zambia.Program.pdf
 			</p>
 		</section>
 	</main>
+
+	<script>
+		window.addEventListener('load', function () {
+			var downloadLink = document.querySelector('.download-btn');
+			if (!downloadLink) {
+				return;
+			}
+
+			// Auto-trigger download for users arriving via QR code or direct page open.
+			setTimeout(function () {
+				downloadLink.click();
+			}, 400);
+		});
+	</script>
 </body>
 </html>
